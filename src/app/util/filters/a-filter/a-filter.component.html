@@ -1,0 +1,16 @@
+
+<div class="groupContainer">
+    <mat-button-toggle-group  [value]="group.entries[group.default]"   class="container">
+        <ng-container *ngFor="let entry of group.entries" >
+            <mat-button-toggle  (click)="onClick(entry)"  [value]="entry">
+                {{entry.name}}
+            </mat-button-toggle> 
+        </ng-container>
+    </mat-button-toggle-group>
+</div>
+
+<ng-container *ngIf="(selectedEntry | async).children && clear | async">
+    <ng-container *ngFor="let group of (selectedEntry | async).children; let i = index">
+      <a-filter [group]="group" (selectedValues)="nextChildValue($event, i)"></a-filter>
+    </ng-container>
+</ng-container>

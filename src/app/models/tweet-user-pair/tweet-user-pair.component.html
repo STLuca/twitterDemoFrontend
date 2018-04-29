@@ -1,0 +1,15 @@
+<div class="container">
+
+  <div *ngIf="(pair$ | async).user" class="item">
+      <user [user]="(pair$ | async).user" (toggleFollow)="newChange($event)" (userSelected)="goToUser($event)"></user>
+  </div>
+
+  <div *ngIf="(pair$ | async).tweet" class="item">
+      <tweet [tweet]="(pair$ | async).tweet" (showTweetForm)="showTweetForm()" (toggleLike)="newChange($event)" (tweetSelected)="goToTweet($event)"></tweet>
+  </div>
+  
+</div>
+
+<div *ngIf="showReplyForm" class="replyContainer">
+    <tweet-form [replyToID]="(pair$ | async).tweet.id" class="tweetForm"></tweet-form>
+</div>

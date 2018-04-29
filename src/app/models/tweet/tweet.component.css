@@ -1,0 +1,29 @@
+/* *{
+    border-style: solid;
+    border-width: 1px;
+  }
+*/
+
+.mainContainer{
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.footerContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.message{
+    margin: auto;
+}
+
+.properties{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.thumbsUp{
+    color: green;
+}
+

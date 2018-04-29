@@ -1,0 +1,20 @@
+<div class="container">
+  
+  <div>
+    <ng-container *ngTemplateOutlet="treeValueTemplate;context:{value: tree.value}"></ng-container>
+  </div>
+
+  
+    <ng-container *ngIf="tree.children">
+      <div [style.display]="grid" [style.grid-template-columns]="cols" >
+          <ng-container *ngFor="let childTree of tree.children">
+              <div class="childContainer">
+                <my-tree [template]="treeValueTemplate" [tree]="childTree"></my-tree>
+              </div>
+            </ng-container>
+      </div>
+      
+    </ng-container>
+  
+    
+</div>

@@ -1,0 +1,15 @@
+<div class="tweetForm">
+    <p style="text-align: center">Make a tweet!</p>
+    <tweet-form [replyToID]="0"></tweet-form>
+</div>
+
+<h2 class="header">Feed</h2>
+<tweet-user-list [filter]="filter" [function]="serverMethod"></tweet-user-list>
+
+<!--<filtered-list [filter]="filter" [inputFunction]="myInputFunction"></filtered-list> 
+<filtered-list [filter]="filter" [pageSizes]="pageSize"  (reset)="resetList()" (output)="nextPage($event)">
+    <ng-container *ngFor="let pair of tweets | async">
+        <tweet-user-pair [pair]="pair"></tweet-user-pair>
+    </ng-container>
+</filtered-list>
+-->

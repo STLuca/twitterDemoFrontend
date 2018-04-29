@@ -1,0 +1,7 @@
+<div *ngIf="tweetLoaded | async">
+  
+</div>
+<tweet-user-pair [pair]="tweet | async"></tweet-user-pair>
+
+<tweet-user-list [filter]="filter" [function]="serverMethod | async"></tweet-user-list>
+<!--<filtered-list [filter]="filter" [inputFunction]="getTweetRepliesFunction | async"></filtered-list> -->

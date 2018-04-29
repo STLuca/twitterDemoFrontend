@@ -1,0 +1,5 @@
+<filtered-list [filter]="filter" [pageSizes]="pageSize"  (reset)="resetList()" (output)="nextPage($event)">
+  <ng-container *ngFor="let pair of data | async" class="pairs">
+      <tweet-user-pair [pair]="pair"></tweet-user-pair>
+  </ng-container>
+</filtered-list>

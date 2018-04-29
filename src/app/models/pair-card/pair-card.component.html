@@ -1,0 +1,84 @@
+
+<mat-card class="card">
+
+  <mat-card-header>
+    <mat-card-title>
+      <h2>{{user.username}}</h2>
+    </mat-card-title>
+  </mat-card-header>
+
+  <img mat-card-image src="https://i.imgur.com/u76fGxP.jpg" height="100px">
+
+  <mat-card-actions>
+    <div>
+      <button mat-button>Follow</button>
+    </div>
+    
+      <button mat-button class="actionsButton">
+        
+            <div>Tweets</div>
+            <div>Following</div>
+            <div>Followers</div>
+            <div>{{user.numOfTweets}}</div>
+            <div>{{user.numOfFollowing}}</div>
+            <div>{{user.numOfFollowers}}</div>
+        
+      </button>
+    
+  </mat-card-actions>
+
+</mat-card>
+
+
+
+
+
+
+<!-- 
+  <span>
+          Tweets
+          {{user.numOfTweets}}
+        </span>
+
+        <span >
+          <div>Following</div>
+          <div>{{user.numOfFollowing}}</div>
+        </span>
+
+        <span>
+          <div>Followers</div>
+          <div>{{user.numOfFollowers}}</div>
+        </span>
+  
+  <mat-card>
+  <mat-card-header>
+      <img mat-card-avatar src="https://i.imgur.com/u76fGxP.jpg">
+      <mat-card-title>{{pair.user.username}}</mat-card-title>
+      <mat-card-subtitle>
+          <button mat-button> {{pair.user.iFollowing}} </button>
+      </mat-card-subtitle>
+  </mat-card-header>
+  
+  <mat-card-content>
+    <div>
+      {{pair.tweet.message}}
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions>
+      <button mat-button>
+          {{pair.tweet.numOfLikes}}
+        <mat-icon>thumb_up</mat-icon>
+      </button>
+      <button mat-button>
+          {{pair.tweet.numOfReplies}} 
+          <mat-icon>comment</mat-icon>
+      </button>    
+
+  </mat-card-actions>
+
+  <mat-card-footer>
+      <mat-icon>date_range</mat-icon> {{pair.tweet.timestamp}}
+  </mat-card-footer>
+</mat-card>
+-->

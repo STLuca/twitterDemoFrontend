@@ -1,0 +1,22 @@
+<h2 class="header"> Twitter </h2>
+
+<mat-toolbar color="primary">
+
+  <nav class="container"> 
+      <a routerLink="/login">
+        <button mat-raised-button color="accent" (click)="loginService.logout()"> {{loginButtonText | async}} </button>
+      </a>
+      <a routerLink="/register">
+        <button mat-raised-button color="accent">REGISTER</button>
+      </a>
+      <a routerLink="/feed" routerLinkActive="active">
+        <button mat-raised-button color="accent">FEED</button>
+      </a>
+      <a *ngIf="loggedInAs | async" [routerLink]="['user', loggedInAs | async]">
+        <button mat-raised-button color="accent" >MY PAGE</button>
+      </a>
+  </nav> 
+  
+  <user-search-form></user-search-form>
+  
+</mat-toolbar>

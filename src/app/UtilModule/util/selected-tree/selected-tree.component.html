@@ -1,0 +1,28 @@
+<ng-container *ngFor="let tree of trees; let i = index">
+    <span (click)="select(i)">
+        <ng-container *ngTemplateOutlet="template;context:{nodeVal: val.value}" ></ng-container>
+    </span>
+</ng-container>
+
+<ng-container *ngIf="trees[selected | async].children">
+  <ng-container *ngFor="let tree of trees[selected | async].children">
+      <selected-tree [tree]="tree" [template]="template"></selected-tree>
+  </ng-container>
+</ng-container>
+
+<!--
+<ng-container *ngFor="let val of tree.nodes; let i = index">
+  <div (click)="onClick(i)">
+      <ng-container *ngTemplateOutlet="template;context:{nodeVal: val.value}" ></ng-container>
+  </div>
+  
+</ng-container>
+
+<ng-container *ngIf="tree.nodes[tree.selected].children">
+  <ng-container *ngFor="let tree of tree.nodes[tree.selected].children">
+      <dyncamic-tree [tree]="tree" [template]="template"></dyncamic-tree>
+  </ng-container>
+  
+</ng-container>
+
+-->

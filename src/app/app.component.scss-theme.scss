@@ -1,0 +1,15 @@
+@import '~@angular/material/theming';
+// Define a custom mixin that takes in the current theme
+@mixin app-component-theme($theme) {
+  // Parse the theme and create variables for each color in the pallete
+  $background: map-get($theme, background);
+  
+  
+  // Create theme specfic styles
+
+  .appContainer {
+    background-color: mat-color($background, background);
+  }
+
+  
+}

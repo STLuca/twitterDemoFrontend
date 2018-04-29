@@ -1,0 +1,13 @@
+.RouterOutlet{
+    max-width: 60%;
+    margin: auto;
+}
+
+.thumb{
+    color: green;
+}
+
+.text{
+    margin: 0 auto;
+    border: 1px solid black;
+}

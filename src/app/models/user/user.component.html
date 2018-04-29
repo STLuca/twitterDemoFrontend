@@ -1,0 +1,29 @@
+<div>
+  <img src="https://i.imgur.com/u76fGxP.jpg" height="50px" width="50px">
+</div>
+
+<div> <button mat-button (click)="goToUser()">{{user.username}} </button></div>
+<div>
+  <button mat-button (click)="toggleFollow()"> {{follow()}} </button>
+</div>
+
+
+
+<div class="propertiesContainer" >
+
+  <div>
+    <div>Tweets</div>
+    <div>{{user.numOfTweets}}</div>
+  </div>
+
+  <div>
+      <div>Following</div>
+      <div>{{user.numOfFollowing}}</div>
+  </div>
+
+  <div>
+      <div>Followers</div>
+      <div>{{user.numOfFollowers}}</div>
+  </div>
+
+</div>

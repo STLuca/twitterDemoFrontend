@@ -1,0 +1,30 @@
+<h2> Register </h2>
+<form [formGroup]="registerForm" novalidate (ngSubmit)="registerUser()">
+
+  <div>
+    <mat-form-field >
+      <input matInput type="text" formControlName="username"  placeholder="Username">
+      <mat-error> Min 2 characters </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field >
+      <input matInput type="email" formControlName="email"  placeholder="Email">
+      <mat-error>You must enter a valid email</mat-error>
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field >
+      <input matInput type="password" formControlName="password"  placeholder="Password">
+      <mat-error> Min 6 characters </mat-error>
+    </mat-form-field>
+  </div>
+
+
+  
+  <div>
+    <button mat-raised-button type="submit" [disabled]="!registerForm.valid">Register</button>
+  </div>
+</form>

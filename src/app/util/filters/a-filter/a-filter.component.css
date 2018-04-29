@@ -1,0 +1,17 @@
+
+/*.myContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 3px;
+    text-align: center;
+    margin: auto;
+    
+}*/
+
+.container{
+    margin: auto;
+}
+
+.groupContainer{
+    margin: 5px;;
+}

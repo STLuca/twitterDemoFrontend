@@ -1,0 +1,12 @@
+<div class="filter">
+    <a-filter [group]="filter" (selectedValues)="nextFilter($event)"></a-filter>
+</div>
+
+<paginated-list [reset]="currentFilterValue" [pageSizes]="pageSizes" [start]="pageSizes[1]" (nextPage)="nextPage($event)">
+    <ng-content></ng-content>
+</paginated-list>
+
+<!--
+    <infinite-list [functionStream]="functionStream" [countPerPage]="10"></infinite-list>
+
+-->

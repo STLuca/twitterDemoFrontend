@@ -1,0 +1,21 @@
+/* .FormElement{
+    display: grid;
+    grid-template-columns: 80px 250px;
+    margin: auto;
+} */
+
+.loginButton{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form{
+    margin: auto;
+}
+
+.container{
+    margin: auto;
+    width: 400px;
+}
+

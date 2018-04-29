@@ -1,0 +1,13 @@
+<div class="mainContainer">
+    <div class="inputContainer">
+        <mat-form-field class="formField">
+            <textarea matInput placeholder="Message" [(ngModel)]="message" class="input"></textarea>
+        </mat-form-field>
+    </div>
+    
+    <div>Characters: {{message.length}}/160</div>
+    <div *ngIf="replyToID">Replying to: {{replyToID}}</div>
+    <button mat-raised-button [disabled]="message.length == 0 || message.length > 160" (click)="createTweet()"><mat-icon>send</mat-icon></button>
+    
+</div>
+

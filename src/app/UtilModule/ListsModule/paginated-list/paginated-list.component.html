@@ -1,0 +1,11 @@
+<mat-form-field>
+    <mat-select placeholder="Page size" [value]="startPageSize">
+      <mat-option *ngFor="let pageSize of pageSizes" [value]="pageSize" (click)="setPageSize(pageSize)">
+        {{ pageSize }}
+      </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<paged-infinite-list [reset]="newReset" (page)="nextPage($event)">
+  <ng-content></ng-content>
+</paged-infinite-list>

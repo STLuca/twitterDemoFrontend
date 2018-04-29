@@ -1,0 +1,40 @@
+<!--
+  <div *ngIf="tweet.iLiked"> Unlike</div>
+  <div *ngIf="!tweet.iLiked"> Like </div>
+-->
+
+<div class="mainContainer">
+
+  <div class="message" id="message" >
+    {{tweet.message}}
+  </div>
+
+  <div class="properties" >
+
+    <div class="likes" (click)="toggleLikeTweet()">
+      <button mat-button>
+          {{tweet.numOfLikes}}
+        <mat-icon [class.thumbsUp]="tweet.iLiked">thumb_up</mat-icon>
+      </button>
+    </div>
+
+    <div class="replies" (click)="goToTweet()">
+      <button mat-button >
+        {{tweet.numOfReplies}} 
+        <mat-icon>comment</mat-icon>
+      </button>     
+    </div>
+
+  </div>
+
+</div>
+
+<div class="footerContainer">
+
+  <div> <button mat-button  (click)="toggleReplyTo()">ID: {{tweet.id}} </button> </div>
+  <div> <button mat-button *ngIf="tweet.replyTo != 0">Replied To: {{tweet.replyTo}}</button> </div>
+  <div> <mat-icon>date_range</mat-icon> {{tweet.timestamp}}</div>
+
+</div>
+
+
